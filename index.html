@@ -2,96 +2,156 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Edson Muteto — Impact & Connect</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Edson Muteto — Impact &amp; Connect</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Arial,sans-serif;background:#f0f0f0;display:flex;justify-content:center;padding:20px 16px 60px;}
-.card{width:100%;max-width:400px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.12);}
-.top{background:linear-gradient(135deg,#8C1A1A,#E05800);padding:28px 24px 22px;}
-.logo{font-size:13px;font-weight:bold;color:rgba(255,255,255,.9);margin-bottom:4px;}
-.logo span{display:block;font-size:10px;font-weight:normal;color:rgba(255,255,255,.6);font-style:italic;}
-.name{font-size:24px;font-weight:900;color:#fff;margin:16px 0 4px;}
-.role{font-size:13px;color:rgba(255,255,255,.75);margin-bottom:14px;}
-.info{font-size:12px;color:rgba(255,255,255,.65);line-height:1.8;}
-.btns{padding:16px;}
-a,button{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:10px;
-  text-decoration:none;font-size:14px;font-weight:600;margin-bottom:10px;
-  border:none;width:100%;text-align:left;cursor:pointer;font-family:Arial,sans-serif;}
-.wa{background:#1aad55;color:#fff;}
-.call{background:#8C1A1A;color:#fff;}
-.mail{background:#f5f5f5;color:#222;border:1px solid #ddd;}
-.save{background:#222;color:#fff;}
-.port{background:#f5f5f5;color:#222;border:1px solid #ddd;}
-.portdl{background:#E05800;color:#fff;}
-.ico{width:32px;height:32px;border-radius:7px;background:rgba(255,255,255,.2);
-  display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
-.mail .ico,.port .ico{background:rgba(0,0,0,.07);}
-.lbl{flex:1;}
-.lbl small{display:block;font-size:11px;opacity:.6;font-weight:normal;margin-top:1px;}
-.sep{height:1px;background:#eee;margin:0 16px 16px;}
-.qrsec{text-align:center;padding:0 16px 24px;}
-.qrlbl{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;}
-#qr{display:inline-block;padding:10px;border:1px solid #ddd;border-radius:10px;background:#fff;}
-.foot{background:#8C1A1A;padding:10px;text-align:center;font-size:10px;color:rgba(255,255,255,.65);font-style:italic;}
+html,body{min-height:100vh;font-family:'Montserrat',Arial,sans-serif;background:#EFEFEF;display:flex;align-items:flex-start;justify-content:center;padding:0 0 48px;}
+.wrap{width:100%;max-width:420px;}
+.card{border-radius:20px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.10);}
+
+/* HERO */
+.hero{background:#1A1A1A;padding:36px 28px 32px;position:relative;overflow:hidden;}
+.hero-accent{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#8C1A1A,#E05800);}
+.hero-circle{position:absolute;right:-50px;bottom:-60px;width:180px;height:180px;border-radius:50%;border:40px solid rgba(255,255,255,.03);}
+
+.brand-row{display:flex;align-items:center;gap:10px;margin-bottom:32px;}
+.brand-line{width:3px;height:28px;background:linear-gradient(180deg,#8C1A1A,#E05800);border-radius:2px;flex-shrink:0;}
+.brand-name{font-size:11px;font-weight:600;color:rgba(255,255,255,.9);letter-spacing:.08em;text-transform:uppercase;}
+.brand-sub{font-size:9px;font-weight:300;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase;margin-top:2px;}
+
+.name{font-size:28px;font-weight:700;color:#FFFFFF;line-height:1.05;margin-bottom:6px;letter-spacing:-.3px;}
+.name em{color:#E05800;font-style:normal;}
+.role{font-size:11px;font-weight:400;color:rgba(255,255,255,.45);letter-spacing:.14em;text-transform:uppercase;margin-bottom:28px;}
+
+.contacts{display:flex;flex-direction:column;gap:11px;}
+.ci{display:flex;align-items:center;gap:12px;}
+.ci-dot{width:4px;height:4px;border-radius:50%;background:#E05800;flex-shrink:0;}
+.ci-text{font-size:12px;font-weight:300;color:rgba(255,255,255,.6);letter-spacing:.02em;}
+
+/* DIVIDER */
+.div-line{height:1px;background:linear-gradient(90deg,#8C1A1A,#E05800,transparent);}
+
+/* BUTTONS */
+.btns{background:#F8F8F8;padding:20px;display:flex;flex-direction:column;gap:9px;}
+
+.btn{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;text-decoration:none;cursor:pointer;border:none;width:100%;text-align:left;font-family:'Montserrat',Arial,sans-serif;transition:opacity .12s;}
+.btn:active{opacity:.75;}
+.btn-wa{background:#1aad55;color:#fff;}
+.btn-red{background:#8C1A1A;color:#fff;}
+.btn-light{background:#fff;color:#1A1A1A;border:0.5px solid #E8E8E8;}
+.btn-dark{background:#1A1A1A;color:#fff;}
+.btn-orange{background:#E05800;color:#fff;}
+
+.bi{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;}
+.btn-light .bi{background:#F2F2F2;}
+
+.bl{flex:1;}
+.bl-t{font-size:12px;font-weight:600;display:block;letter-spacing:.03em;}
+.bl-s{font-size:10px;font-weight:300;opacity:.55;display:block;margin-top:2px;letter-spacing:.02em;}
+.arr{font-size:16px;opacity:.25;flex-shrink:0;font-weight:200;}
+
+/* QR */
+.qr-area{background:#F8F8F8;padding:16px 20px 22px;text-align:center;border-top:1px solid #EEEEEE;}
+.qr-label{font-size:9px;font-weight:600;color:#BBBBBB;text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px;}
+#qr{display:inline-block;padding:8px;border-radius:10px;background:#fff;border:0.5px solid #E8E8E8;}
+
+/* FOOTER */
+.foot{background:#1A1A1A;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;}
+.foot-text{font-size:9px;font-weight:300;color:rgba(255,255,255,.25);letter-spacing:.1em;text-transform:uppercase;}
+.foot-mark{display:flex;gap:3px;}
+.fm{width:14px;height:2px;border-radius:1px;}
+.fm1{background:#8C1A1A;}
+.fm2{background:#E05800;}
+.fm3{background:rgba(255,255,255,.15);}
 </style>
 </head>
 <body>
+<div class="wrap">
 <div class="card">
-  <div class="top">
-    <div class="logo">Impact and Connect Enterprise, LDA<span>Front end business solutions</span></div>
-    <div class="name">Edson Muteto</div>
+
+  <div class="hero">
+    <div class="hero-accent"></div>
+    <div class="hero-circle"></div>
+    <div class="brand-row">
+      <div class="brand-line"></div>
+      <div>
+        <div class="brand-name">Impact and Connect Enterprise, LDA</div>
+        <div class="brand-sub">Front end business solutions</div>
+      </div>
+    </div>
+    <div class="name">Edson <em>Muteto</em></div>
     <div class="role">Director de Vendas e Operações</div>
-    <div class="info">
-      📞 +258 84 31 41 798<br>
-      ✉️ impactconnectenterprises@gmail.com<br>
-      📍 Av. Mao Tse Tung, nº 418 — Maputo
+    <div class="contacts">
+      <div class="ci"><div class="ci-dot"></div><span class="ci-text">+258 84 31 41 798</span></div>
+      <div class="ci"><div class="ci-dot"></div><span class="ci-text">impactconnectenterprises@gmail.com</span></div>
+      <div class="ci"><div class="ci-dot"></div><span class="ci-text">Av. Mao Tse Tung, nº 418 — Maputo</span></div>
     </div>
   </div>
 
+  <div class="div-line"></div>
+
   <div class="btns">
-    <a class="wa" href="https://wa.me/258843141798?text=Hello%20Edson%2C%20I%20scanned%20your%20Impact%20%26%20Connect%20digital%20business%20card%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
-      <div class="ico">💬</div>
-      <div class="lbl">Contact on WhatsApp<small>Opens a conversation instantly</small></div>
+    <a class="btn btn-wa" href="https://wa.me/258843141798?text=Hello%20Edson%2C%20I%20scanned%20your%20Impact%20%26%20Connect%20digital%20business%20card%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
+      <div class="bi">💬</div>
+      <div class="bl"><span class="bl-t">Contact on WhatsApp</span><span class="bl-s">Opens a conversation instantly</span></div>
+      <span class="arr">›</span>
     </a>
-    <a class="call" href="tel:+258843141798">
-      <div class="ico">📞</div>
-      <div class="lbl">+258 84 31 41 798<small>Call directly</small></div>
+    <a class="btn btn-red" href="tel:+258843141798">
+      <div class="bi">📞</div>
+      <div class="bl"><span class="bl-t">+258 84 31 41 798</span><span class="bl-s">Call directly</span></div>
+      <span class="arr">›</span>
     </a>
-    <a class="mail" href="mailto:impactconnectenterprises@gmail.com">
-      <div class="ico">✉️</div>
-      <div class="lbl">impactconnectenterprises@gmail.com<small>Send an email</small></div>
+    <a class="btn btn-light" href="mailto:impactconnectenterprises@gmail.com">
+      <div class="bi">✉️</div>
+      <div class="bl"><span class="bl-t">Send an email</span><span class="bl-s">impactconnectenterprises@gmail.com</span></div>
+      <span class="arr">›</span>
     </a>
-    <a class="save" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Edson%20Muteto%0AORG:Impact%20and%20Connect%20Enterprise%2C%20Lda%0ATITLE:Director%20de%20Vendas%20e%20Opera%C3%A7%C3%B5es%0ATEL:+258843141798%0AEMAIL:impactconnectenterprises%40gmail.com%0AADR:;;Av.%20Mao%20Tse%20Tung%20418;Maputo;;;Mozambique%0AEND:VCARD" download="Edson_Muteto.vcf">
-      <div class="ico">💾</div>
-      <div class="lbl">Save Contact<small>Add to your phone contacts</small></div>
+    <a class="btn btn-dark" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Edson%20Muteto%0AORG:Impact%20and%20Connect%20Enterprise%2C%20Lda%0ATITLE:Director%20de%20Vendas%20e%20Opera%C3%A7%C3%B5es%0ATEL:+258843141798%0AEMAIL:impactconnectenterprises%40gmail.com%0AADR:;;Av.%20Mao%20Tse%20Tung%20418;Maputo;;;Mozambique%0AEND:VCARD" download="Edson_Muteto.vcf">
+      <div class="bi">💾</div>
+      <div class="bl"><span class="bl-t">Save contact</span><span class="bl-s">Add to your phone contacts</span></div>
+      <span class="arr">›</span>
     </a>
-    <a class="port" href="https://drive.google.com/file/d/1Blz8E9VQj7XCidf67ZVSEjdhZDgIAHNG/view" target="_blank">
-      <div class="ico">📄</div>
-      <div class="lbl">View Company Portfolio<small>Impact & Connect — Company Profile</small></div>
+    <a class="btn btn-light" href="https://drive.google.com/file/d/1Blz8E9VQj7XCidf67ZVSEjdhZDgIAHNG/view" target="_blank">
+      <div class="bi">📄</div>
+      <div class="bl"><span class="bl-t">View company portfolio</span><span class="bl-s">Impact &amp; Connect — Company Profile</span></div>
+      <span class="arr">›</span>
     </a>
-    <a class="portdl" href="https://drive.google.com/uc?export=download&id=1Blz8E9VQj7XCidf67ZVSEjdhZDgIAHNG" target="_blank">
-      <div class="ico">⬇️</div>
-      <div class="lbl">Download Portfolio PDF<small>Save to your device</small></div>
+    <a class="btn btn-orange" href="https://drive.google.com/uc?export=download&id=1Blz8E9VQj7XCidf67ZVSEjdhZDgIAHNG" target="_blank">
+      <div class="bi">⬇️</div>
+      <div class="bl"><span class="bl-t">Download portfolio PDF</span><span class="bl-s">Save to your device</span></div>
+      <span class="arr">›</span>
     </a>
   </div>
 
-  <div class="sep"></div>
-  <div class="qrsec">
-    <div class="qrlbl">Scan to connect</div>
+  <div class="qr-area">
+    <div class="qr-label">Scan to connect</div>
     <div id="qr"></div>
   </div>
-  <div class="foot">Impact & Connect Enterprise, LDA · Front end business solutions</div>
+
+  <div class="foot">
+    <span class="foot-text">Impact &amp; Connect · Maputo, MZ</span>
+    <div class="foot-mark">
+      <div class="fm fm1"></div>
+      <div class="fm fm2"></div>
+      <div class="fm fm3"></div>
+    </div>
+  </div>
+
+</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-new QRCode(document.getElementById('qr'),{
-  text:'https://riccishynider.github.io/cartao-digital/',
-  width:140,height:140,
-  colorDark:'#1a1a1a',colorLight:'#ffffff',
-  correctLevel:QRCode.CorrectLevel.M
-});
+if(typeof QRCode!=='undefined'){
+  new QRCode(document.getElementById('qr'),{
+    text:'https://riccishynider.github.io/cartao-digital/',
+    width:140,height:140,
+    colorDark:'#1a1a1a',colorLight:'#ffffff',
+    correctLevel:QRCode.CorrectLevel.M
+  });
+}
 </script>
 </body>
 </html>
